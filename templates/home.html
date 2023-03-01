@@ -16,8 +16,18 @@
       <p class="text-center lead mb-0">Don't touch anything; put everything back when you're done. Move silently and without hesitation.</p>
       <p class="text-center lead mb-0">Fear nothing:</p>
       <p class="text-center lead">you are <strong><u>NOT</u></strong> safe here but you will survive.</p>
-      <div class="d-grid gap-2">
-        <button type="button" class="btn btn-primary btn-warning">Enter</button>
+      <div class="text-center">
+        {% for action in actions %}
+            {% if action['name'] == 'Move' %}
+              {% include 'move_btn.html' %}
+            {% elif action['name'] == 'Interact' %}
+              {% include 'interact_btn.html'%}
+            {% elif action['name'] == 'Search' %}
+              {% include 'search_btn.html' %}
+            {% elif action['name'] == 'Attack' %}
+              {% include 'attack_btn.html' %}
+            {% endif %}
+        {% endfor %}
       </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
