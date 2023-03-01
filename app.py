@@ -7,13 +7,13 @@ ACTIONS = [
     'id': 1,
     'name': 'Move',
     'cost': 1,
-    'difficulty': 'Easy'
+    'difficulty': 'Trivial'
   },
   {
     'id': 2,
     'name': 'Interact',
     'cost': 2,
-    'difficulty': 'Medium'
+    'difficulty': 'Easy'
   },
   {
     'id': 3,
