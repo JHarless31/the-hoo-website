@@ -1,17 +1,7 @@
 from flask import Flask, render_template, jsonify
-from database import engine
-from sqlalchemy import text
-app = Flask(__name__)
+from database import load_actions_from_db
 
-def load_actions_from_db():
-  #use the database engine to open a connection inside the variable "conn" to the database and query the database; save the results in the variable "result"
-  with engine.connect() as conn:
-    result = conn.execute(text("SELECT * FROM actions"))
-  #create a list of dictionaries; each dictionary is a row in the "actions" table
-    actions = []
-    for row in result.all():
-      actions.append(row._asdict())
-    return actions
+app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
