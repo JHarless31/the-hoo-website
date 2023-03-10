@@ -10,7 +10,8 @@ def hello_world():
 
 @app.route("/api/actions")
 def list_actions():
-  return jsonify(ACTIONS)
+  actions_list = load_actions_from_db()
+  return jsonify(actions_list)
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)

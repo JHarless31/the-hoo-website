@@ -19,13 +19,15 @@
       <div class="text-center">
         {% for action in actions %}
             {% if action['act_name'] == 'Move' %}
-              {% include 'move_btn.html' %}
+              {% include 'Buttons/move_btn.html' %}
             {% elif action['act_name'] == 'Interact' %}
-              {% include 'interact_btn.html'%}
+              {% include 'Buttons/interact_btn.html'%}
             {% elif action['act_name'] == 'Search' %}
-              {% include 'search_btn.html' %}
+              {% include 'Buttons/search_btn.html' %}
             {% elif action['act_name'] == 'Attack' %}
-              {% include 'attack_btn.html' %}
+              {% include 'Buttons/attack_btn.html' %}
+            {% elif action['act_name'] == 'Quit' %}
+              {% include 'Buttons/quit_btn.html' %}
             {% endif %}
         {% endfor %}
       </div>

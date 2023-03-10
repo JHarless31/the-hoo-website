@@ -18,12 +18,3 @@ def load_actions_from_db():
     for row in result.all():
       actions.append(row._asdict())
     return actions
-
-  #save all results in variable
-  #result_all = result.all()
-
-  #save first result in result_all list in a variable
-  #first_result = result_all[0]
-
-  #create a dictionary with the first result
-  #first_result_dict = first_result._asdict()
