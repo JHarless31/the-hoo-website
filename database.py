@@ -1,7 +1,9 @@
+import os
 from sqlalchemy import create_engine, text
 
+
 #save the database connection string as a variable
-db_conn_str = "mysql+pymysql://lilctga62bk09z3ipajt:pscale_pw_R1d9qUNhmLEN0aNvNNdNOgCWmZ4q2m6D0MxsCcJX9Lt@us-west.connect.psdb.cloud/thehoo?charset=utf8mb4"
+db_conn_str = os.environ['DB_CONNECTION_STRING']
 
 #creating an database engine using db_conn_str inside of a variable
 engine = create_engine(db_conn_str,
